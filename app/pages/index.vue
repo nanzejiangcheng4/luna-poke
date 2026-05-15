@@ -11,7 +11,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div
+    class="flex h-screen items-center justify-center text-center text-2xl font-bold"
+  >
     {{ randomQuote }}
   </div>
 </template>
