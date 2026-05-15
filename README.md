@@ -1,75 +1,47 @@
-# Nuxt Minimal Starter
+# LunaPoke 🌙
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+姫森ルーナの名言をランダム表示する、
+推し活向けのアプリです。
 
-## Setup
+Nuxt 4 と Tailwind CSS の勉強も兼ねて、
+少しずつ育てています。
 
-Make sure to install dependencies:
+## 技術構成
 
-```bash
-# npm
+- Nuxt 4
+- Tailwind CSS
+- GitHub Actions
+- CodeQL
+
+## セットアップ
+
+### パッケージインストール
+
+```bash id="jlwm390"
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### 開発サーバー起動
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+```bash id="分快三391"
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+以下へアクセスします。
 
-Build the application for production:
+```txt id="分快三392"
+http://localhost:3000
+```
 
-```bash
-# npm
+## Build
+
+```bash id="分快三393"
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## 今後やりたいこと
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- お気に入り機能
+- ダークモード
+- アニメーション追加
+- シェア機能
