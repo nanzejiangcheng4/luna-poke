@@ -1,26 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { quotes } from "~/data/quotes";
+import { onMounted } from "vue";
+import { useRandomQuote } from "~/composables/useRandomQuote";
 
-const randomQuote = ref("");
-const isLoading = ref(false);
-const currentIndex = ref(-1);
-
-const updateQuote = async () => {
-  isLoading.value = true;
-  // アニメーション表示の時間
-  await new Promise((resolve) => setTimeout(resolve, 300));
-
-  let randomIndex: number;
-  // 前と異なるインデックスを選ぶ
-  do {
-    randomIndex = Math.floor(Math.random() * quotes.length);
-  } while (randomIndex === currentIndex.value && quotes.length > 1);
-
-  currentIndex.value = randomIndex;
-  randomQuote.value = quotes[randomIndex] ?? "なのら〜！";
-  isLoading.value = false;
-};
+const { randomQuote, isLoading, updateQuote } = useRandomQuote();
 
 onMounted(() => {
   updateQuote();
