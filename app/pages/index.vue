@@ -17,7 +17,7 @@ onMounted(() => {
     <button
       @click="updateQuote"
       :disabled="isLoading"
-      class="rounded-lg bg-blue-500 px-6 py-2 text-white font-semibold hover:bg-blue-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+      class="rounded-lg bg-luna-pink px-6 py-2 text-white hover:opacity-60 font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
     >
       {{ isLoading ? "更新中。。。" : "もう一回" }}
     </button>

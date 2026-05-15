@@ -4,14 +4,4 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
   pages: true,
-  tailwindcss: {
-    config: {
-      content: [
-        "./app/components/**/*.vue",
-        "./app/layouts/**/*.vue",
-        "./app/pages/**/*.vue",
-        "./app/app.vue",
-      ],
-    },
-  },
 });
