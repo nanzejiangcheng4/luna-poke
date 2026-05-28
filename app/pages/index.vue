@@ -12,14 +12,14 @@ onMounted(() => {
 <template>
   <div class="flex h-screen flex-col items-center justify-center text-center">
     <div class="text-2xl font-bold mb-8">
-      {{ randomQuote }}
+      {{ isLoading ? "更新中。。。" : randomQuote }}
     </div>
-    <button
-      @click="updateQuote"
-      :disabled="isLoading"
-      class="bg-luna-purple hover:bg-luna-pink text-white px-4 py-2 rounded-xl transition-colors duration-300 shadow-lg"
-    >
-      {{ isLoading ? "更新中。。。" : "もう一回" }}
+    <button @click="updateQuote" :disabled="isLoading">
+      <img
+        src="https://placehold.jp/c084fc/ffffff/150x150.png?text=Luna"
+        alt="Luna"
+        class="animate-pulse size-full object-cover"
+      />
     </button>
   </div>
 </template>
