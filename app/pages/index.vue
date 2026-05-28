@@ -10,16 +10,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex h-screen flex-col items-center justify-center text-center">
-    <div class="text-2xl font-bold mb-8">
-      {{ isLoading ? "更新中。。。" : randomQuote }}
+  <div class="fixed bottom-4 right-4">
+    <div class="flex flex-col items-center text-center">
+      <div class="mb-4 rounded-2xl bg-white p-4 shadow-lg hover:shadow-xl">
+        {{ isLoading ? "更新中。。。" : randomQuote }}
+      </div>
+      <div class="animate-float">
+        <button
+          @click="updateQuote"
+          :disabled="isLoading"
+          class="cursor-pointer transition-transform duration-200 hover:scale-105 hover:rotate-[-2deg] active:scale-95"
+        >
+          <img
+            src="/images/luna-pen-happy.png"
+            alt="Luna"
+            class="size-40 object-cover"
+          />
+        </button>
+      </div>
     </div>
-    <button @click="updateQuote" :disabled="isLoading">
-      <img
-        src="https://placehold.jp/c084fc/ffffff/150x150.png?text=Luna"
-        alt="Luna"
-        class="animate-pulse size-full object-cover"
-      />
-    </button>
   </div>
 </template>
